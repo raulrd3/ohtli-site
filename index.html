@@ -80,6 +80,22 @@
       padding:15px 22px;border-radius:12px;font-weight:800;box-shadow:0 8px 20px rgba(255,181,42,.25);
     }
     .subnote{margin-top:14px;color:var(--muted);font-size:14px}
+    .hero-about{
+      margin-top:34px;
+      padding-top:26px;
+      border-top:1px solid var(--line);
+      max-width:640px;
+    }
+    .hero-about h2{
+      font-size:30px;
+      margin-bottom:12px;
+    }
+    .hero-about p{
+      margin:0;
+      color:#52606d;
+      font-size:17px;
+      line-height:1.65;
+    }
     .hero-photo{
       position:relative;border-radius:32px;overflow:hidden;box-shadow:var(--shadow);
       background:#d9ddd8; aspect-ratio:4/5;
@@ -98,8 +114,10 @@
     }
     .card .icon{
       width:52px;height:52px;border-radius:16px;background:var(--green-soft);
-      display:grid;place-items:center;font-size:24px;margin-bottom:22px;
+      color:var(--green);
+      display:grid;place-items:center;margin-bottom:22px;
     }
+    .card .icon svg{display:block}
     .card h3{font-size:30px;margin-bottom:12px}
     .card p{margin:0;color:#536171;font-size:17px}
 
@@ -115,38 +133,6 @@
     .lang{
       margin-top:22px;padding:16px 18px;border-radius:14px;background:rgba(88,125,62,.10);
       color:#405f2c;font-weight:750;display:inline-block
-    }
-
-    .about-raul{
-      background:var(--paper);
-    }
-    .about-raul-grid{
-      display:grid;
-      grid-template-columns:.95fr 1.05fr;
-      gap:50px;
-      align-items:center;
-    }
-    .about-raul-photo{
-      border-radius:28px;
-      overflow:hidden;
-      box-shadow:var(--shadow);
-      aspect-ratio:4/5;
-      background:#d9ddd8;
-    }
-    .about-raul-photo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      object-position:center 38%;
-    }
-    .about-raul h2{
-      font-size:46px;
-      margin-bottom:20px;
-    }
-    .about-raul p{
-      font-size:18px;
-      color:#52606d;
-      max-width:680px;
     }
 
     .cta{
@@ -165,11 +151,10 @@
 
     @media (max-width:860px){
       .navlinks a:not(.cta-mini){display:none}
-      .hero-grid,.about-grid,.about-raul-grid,.cards{grid-template-columns:1fr}
+      .hero-grid,.about-grid,.cards{grid-template-columns:1fr}
       .hero{padding-top:48px}
       .hero-photo{max-height:620px}
       .about-logo{max-width:420px}
-      .about-raul-photo{max-height:620px}
       .footer-meta{text-align:left}
     }
 
@@ -180,7 +165,7 @@
       section{padding:64px 0}
       .hero{padding:42px 0 60px}
       h1{font-size:47px}
-      .section-head h2,.about h2,.about-raul h2,.cta h2{font-size:38px}
+      .section-head h2,.about h2,.cta h2{font-size:38px}
       .card{padding:26px}
       .btn{width:100%}
     }
@@ -195,7 +180,6 @@
       <nav class="navlinks" aria-label="Primary">
         <a href="#services">Services</a>
         <a href="#about">About</a>
-        <a href="#raul">Raul</a>
         <a class="cta-mini" href="https://calendar.app.google/sowLzGuXN7UAEz4n9">Schedule</a>
       </nav>
     </div>
@@ -212,6 +196,11 @@
             <a class="btn" href="https://calendar.app.google/sowLzGuXN7UAEz4n9">Schedule a Free Consultation</a>
           </div>
           <div class="subnote">Free therapy or supervision consult call.</div>
+
+          <div class="hero-about" id="raul">
+            <h2>About Raul</h2>
+            <p>Raul is a licensed clinical social worker and supervisor offering therapy and clinical supervision in English, Spanish, and Portuguese. He brings a warm, direct, and practical approach to helping clients and clinicians find clarity, move through difficult seasons, and figure out what comes next.</p>
+          </div>
         </div>
         <div class="hero-photo">
           <img src="raul-photo.jpg" alt="Ohtli Therapy clinician portrait">
@@ -227,12 +216,24 @@
         </div>
         <div class="cards">
           <article class="card">
-            <div class="icon" aria-hidden="true">◌</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="7" r="3"></circle>
+                <path d="M5.5 20c.6-4.2 3-6.4 6.5-6.4s5.9 2.2 6.5 6.4"></path>
+              </svg>
+            </div>
             <h3>Individual Therapy</h3>
             <p>One-on-one therapy tailored to your goals, growth, relationships, transitions, and well-being.</p>
           </article>
           <article class="card">
-            <div class="icon" aria-hidden="true">↗</div>
+            <div class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="8" cy="8" r="2.5"></circle>
+                <circle cx="16" cy="8" r="2.5"></circle>
+                <path d="M3.8 19c.5-3.6 2.2-5.5 4.2-5.5s3.7 1.9 4.2 5.5"></path>
+                <path d="M11.8 19c.5-3.6 2.2-5.5 4.2-5.5s3.7 1.9 4.2 5.5"></path>
+              </svg>
+            </div>
             <h3>Clinical Supervision</h3>
             <p>Supportive, practical clinical supervision for social workers seeking growth, confidence, and stronger clinical judgment.</p>
           </article>
@@ -249,18 +250,6 @@
           <h2>About Ohtli Therapy</h2>
           <p>Ohtli Therapy, PLLC offers individual therapy and clinical supervision with a warm, grounded, and culturally responsive approach.</p>
           <div class="lang">English · Español · Português</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about-raul" id="raul">
-      <div class="wrap about-raul-grid">
-        <div class="about-raul-photo">
-          <img src="raul-photo.jpg" alt="Raul, licensed clinical social worker and supervisor">
-        </div>
-        <div>
-          <h2>About Raul</h2>
-          <p>Raul is a licensed clinical social worker and supervisor offering therapy and clinical supervision in English, Spanish, and Portuguese. He brings a warm, direct, and practical approach to helping clients and clinicians find clarity, move through difficult seasons, and figure out what comes next.</p>
         </div>
       </div>
     </section>
